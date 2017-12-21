@@ -23,6 +23,10 @@
         <maven-antrun.version>1.8</maven-antrun.version>
     </properties>
 
+    <modules>
+        <module>rlai-chapter01</module>
+    </modules>
+
     <dependencyManagement>
         <dependencies>
         </dependencies>
