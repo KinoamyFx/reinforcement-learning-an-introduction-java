@@ -45,4 +45,6 @@ public class GamblerTest extends Application {
         primaryStage.setHeight(768);
         primaryStage.show();
     }
+
+
 }
