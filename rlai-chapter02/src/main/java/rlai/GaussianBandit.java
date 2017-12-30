@@ -5,17 +5,19 @@ import java.util.Random;
 public class GaussianBandit implements Bandit {
 
     private Random random;
-    private int a;
-    private int b;
+    private double a;
+    private double b;
+    private double μ;
 
-    public GaussianBandit(int a, int b) {
+    public GaussianBandit(double μ) {
         this.random = new Random();
-        this.a = a;
-        this.b = b;
+        this.a = μ - 1;
+        this.b = μ + 1;
+        this.μ = μ;
     }
 
     @Override
-    public float select() {
-        return (float)(Math.sqrt(b) * random.nextGaussian() + a);
+    public double select() {
+        return random.nextDouble() + μ;
     }
 }

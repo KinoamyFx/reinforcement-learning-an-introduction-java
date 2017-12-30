@@ -31,14 +31,28 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.jfree</groupId>
-                <artifactId>jfreechart</artifactId>
-                <version>1.5.0</version>
+                <groupId>com.object-refinery</groupId>
+                <artifactId>orson-charts-fx</artifactId>
+                <version>1.0</version>
             </dependency>
+            <dependency>
+                <groupId>org.jfree</groupId>
+                <artifactId>jfreechart-fx</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.nd4j</groupId>
+                <artifactId>nd4j-native-platform</artifactId>
+                <version>0.9.1</version>
+            </dependency>
+
+
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
+                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -49,8 +63,12 @@
     </dependencyManagement>
     <dependencies>
         <dependency>
+            <groupId>com.object-refinery</groupId>
+            <artifactId>orson-charts-fx</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.jfree</groupId>
-            <artifactId>jfreechart</artifactId>
+            <artifactId>jfreechart-fx</artifactId>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -59,6 +77,10 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-native-platform</artifactId>
         </dependency>
     </dependencies>
 </project>

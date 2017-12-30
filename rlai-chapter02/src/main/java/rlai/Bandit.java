@@ -1,5 +1,5 @@
 package rlai;
 
 public interface Bandit {
-    float select();
+    double select();
 }
