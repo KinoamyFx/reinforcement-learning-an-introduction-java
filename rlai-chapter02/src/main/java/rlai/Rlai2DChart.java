@@ -32,7 +32,6 @@ public class Rlai2DChart extends Application {
     }
 
     public void addLine(String lineName, INDArray array) {
-        //dataset.addSeries(lineName,);
         lines.put(lineName, array);
     }
 }
