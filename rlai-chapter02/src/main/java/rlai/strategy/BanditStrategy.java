@@ -1,4 +1,4 @@
-package rlai;
+package rlai.strategy;
 
 public interface BanditStrategy {
 

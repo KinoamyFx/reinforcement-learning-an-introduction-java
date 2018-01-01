@@ -3,6 +3,7 @@ package rlai;
 import java.util.List;
 
 import lombok.NonNull;
+import rlai.strategy.BanditStrategy;
 
 public class Gambler {
     private List<Bandit> bandits;

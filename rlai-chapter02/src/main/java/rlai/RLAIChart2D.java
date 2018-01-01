@@ -1,5 +1,7 @@
 package rlai;
 
+import java.awt.*;
+
 import javafx.scene.Scene;
 import lombok.Getter;
 import org.jfree.chart.ChartFactory;
@@ -13,9 +15,7 @@ import org.jfree.chart.ui.HorizontalAlignment;
 import org.jfree.data.xy.DefaultXYDataset;
 import org.nd4j.linalg.api.ndarray.INDArray;
 
-import java.awt.*;
-
-public class Rlai2DChart {
+public class RLAIChart2D {
 
     @Getter
     private String title;
@@ -24,13 +24,12 @@ public class Rlai2DChart {
 
     private DefaultXYDataset dataset;
 
-    public Rlai2DChart(String title, String xName, String yName) {
+    public RLAIChart2D(String title, String xName, String yName) {
         this.title = title;
         this.xName = xName;
         this.yName = yName;
         this.dataset = new DefaultXYDataset();
     }
-
 
     public void addLine(String lineName, INDArray array) {
         double[][] data = new double[2][array.columns()];
@@ -45,7 +44,7 @@ public class Rlai2DChart {
 
     public Scene toScene() {
         JFreeChart chart = ChartFactory.createXYLineChart(title, xName, yName, dataset);
-        XYPlot plot = (XYPlot) chart.getPlot();
+        XYPlot plot = (XYPlot)chart.getPlot();
         plot.setDomainPannable(true);
         plot.setRangePannable(true);
         plot.setDomainCrosshairVisible(true);
@@ -56,7 +55,7 @@ public class Rlai2DChart {
         chart.getLegend().setHorizontalAlignment(HorizontalAlignment.CENTER);
         XYItemRenderer r = plot.getRenderer();
         if (r instanceof XYLineAndShapeRenderer) {
-            XYLineAndShapeRenderer renderer = (XYLineAndShapeRenderer) r;
+            XYLineAndShapeRenderer renderer = (XYLineAndShapeRenderer)r;
             renderer.setDefaultShapesVisible(false);
             renderer.setDrawSeriesLineAsPath(true);
             renderer.setAutoPopulateSeriesStroke(false);

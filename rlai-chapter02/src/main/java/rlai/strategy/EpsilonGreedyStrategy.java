@@ -1,4 +1,4 @@
-package rlai;
+package rlai.strategy;
 
 import java.util.Random;
 import java.util.stream.IntStream;
