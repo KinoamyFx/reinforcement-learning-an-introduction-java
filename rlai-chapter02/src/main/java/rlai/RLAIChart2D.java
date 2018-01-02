@@ -59,7 +59,7 @@ public class RLAIChart2D {
             renderer.setDefaultShapesVisible(false);
             renderer.setDrawSeriesLineAsPath(true);
             renderer.setAutoPopulateSeriesStroke(false);
-            renderer.setDefaultStroke(new BasicStroke(3.0f));
+            renderer.setDefaultStroke(new BasicStroke(2.0f));
         }
         ChartViewer viewer = new ChartViewer(chart);
         return new Scene(viewer);
