@@ -4,14 +4,14 @@ import java.awt.*;
 
 import javafx.scene.Scene;
 import lombok.Getter;
+import org.jfree.chart.ChartColor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
-import org.jfree.chart.block.BlockBorder;
 import org.jfree.chart.fx.ChartViewer;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYItemRenderer;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
-import org.jfree.chart.ui.HorizontalAlignment;
+import org.jfree.chart.util.DefaultShadowGenerator;
 import org.jfree.data.xy.DefaultXYDataset;
 import org.nd4j.linalg.api.ndarray.INDArray;
 
@@ -45,21 +45,13 @@ public class RLAIChart2D {
     public Scene toScene() {
         JFreeChart chart = ChartFactory.createXYLineChart(title, xName, yName, dataset);
         XYPlot plot = (XYPlot)chart.getPlot();
-        plot.setDomainPannable(true);
-        plot.setRangePannable(true);
-        plot.setDomainCrosshairVisible(true);
-        plot.setRangeCrosshairVisible(true);
-        plot.getDomainAxis().setLowerMargin(0.0);
-
-        chart.getLegend().setFrame(BlockBorder.NONE);
-        chart.getLegend().setHorizontalAlignment(HorizontalAlignment.CENTER);
+        plot.setShadowGenerator(new DefaultShadowGenerator());
+        plot.setBackgroundPaint(ChartColor.WHITE);
         XYItemRenderer r = plot.getRenderer();
         if (r instanceof XYLineAndShapeRenderer) {
             XYLineAndShapeRenderer renderer = (XYLineAndShapeRenderer)r;
-            renderer.setDefaultShapesVisible(false);
-            renderer.setDrawSeriesLineAsPath(true);
             renderer.setAutoPopulateSeriesStroke(false);
-            renderer.setDefaultStroke(new BasicStroke(2.0f));
+            renderer.setDefaultStroke(new BasicStroke(1.5F));
         }
         ChartViewer viewer = new ChartViewer(chart);
         return new Scene(viewer);

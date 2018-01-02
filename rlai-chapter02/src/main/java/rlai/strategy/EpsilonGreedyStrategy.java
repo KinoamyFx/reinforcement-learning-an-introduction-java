@@ -3,7 +3,7 @@ package rlai.strategy;
 import java.util.Random;
 import java.util.stream.IntStream;
 
-import rlai.reward.RewardUpdater;
+import rlai.updater.RewardUpdater;
 
 public class EpsilonGreedyStrategy implements BanditStrategy {
     private double ε;

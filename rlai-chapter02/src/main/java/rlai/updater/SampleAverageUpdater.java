@@ -1,4 +1,4 @@
-package rlai.reward;
+package rlai.updater;
 
 public class SampleAverageUpdater implements RewardUpdater {
     @Override

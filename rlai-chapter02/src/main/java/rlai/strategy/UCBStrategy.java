@@ -2,7 +2,7 @@ package rlai.strategy;
 
 import java.util.stream.IntStream;
 
-import rlai.reward.RewardUpdater;
+import rlai.updater.RewardUpdater;
 
 import static java.lang.Math.log;
 import static java.lang.Math.sqrt;

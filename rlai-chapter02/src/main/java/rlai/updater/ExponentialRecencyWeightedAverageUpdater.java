@@ -1,4 +1,4 @@
-package rlai.reward;
+package rlai.updater;
 
 public class ExponentialRecencyWeightedAverageUpdater implements RewardUpdater {
     private double α;

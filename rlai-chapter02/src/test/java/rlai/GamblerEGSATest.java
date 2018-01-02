@@ -7,10 +7,10 @@ import java.util.stream.IntStream;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import rlai.reward.ExponentialRecencyWeightedAverageUpdater;
 import rlai.strategy.BanditStrategy;
 import rlai.strategy.EpsilonGreedyStrategy;
 import rlai.strategy.UCBStrategy;
+import rlai.updater.ExponentialRecencyWeightedAverageUpdater;
 
 public class GamblerEGSATest extends Application {
     public static void main(String[] args) {
