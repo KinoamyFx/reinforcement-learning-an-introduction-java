@@ -2,3 +2,14 @@ checks:
     java:
         code_rating: true
         duplication: true
+
+
+
+build:
+    tests:
+        override:
+            -
+                command: mvn clean package
+                coverage:
+                    file: 'scrutinizer-reports'
+                    format: 'jacoco'
