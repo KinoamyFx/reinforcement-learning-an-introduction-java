@@ -13,9 +13,9 @@ public class UCBStrategy implements BanditStrategy {
     private int t;
     private RewardUpdater updater;
 
-    public UCBStrategy(int k, RewardUpdater updater) {
-        this.averageReward = new double[k];
-        this.counter = new int[k];
+    public UCBStrategy(int bandits, RewardUpdater updater) {
+        this.averageReward = new double[bandits];
+        this.counter = new int[bandits];
         this.updater = updater;
     }
 
@@ -25,9 +25,17 @@ public class UCBStrategy implements BanditStrategy {
             return t;
         }
         double[] at = new double[averageReward.length];
+
+        /*
+        计算reward
+         */
         IntStream.range(0, averageReward.length).parallel().forEach(i ->
             at[i] = averageReward[i] + sqrt(log(t) / counter[i])
         );
+
+        /*
+        找到最大的reward
+         */
         return IntStream.range(0, averageReward.length).reduce((l, r) -> at[l] > at[r] ? l : r).getAsInt();
     }
 

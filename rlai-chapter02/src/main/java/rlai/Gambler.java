@@ -5,6 +5,9 @@ import java.util.List;
 import lombok.NonNull;
 import rlai.strategy.BanditStrategy;
 
+/**
+ * 赌徒一个
+ */
 public class Gambler {
     private List<Bandit> bandits;
     private BanditStrategy strategy;

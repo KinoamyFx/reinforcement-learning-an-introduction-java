@@ -2,6 +2,9 @@ package rlai;
 
 import java.util.Random;
 
+/**
+ * 内部生成规则为高斯分布的摇臂机器人
+ */
 public class GaussianBandit implements Bandit {
 
     private Random random;
