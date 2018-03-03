@@ -5,7 +5,13 @@ checks:
 build:
     environment:
         java: 'java-8-oracle'
-
+    tests:
+            override:
+                -
+                    command: mvn clean package
+                    coverage:
+                        file: '/cover'
+                        format: 'jacoco'
 
 #build:
 #    tests:
