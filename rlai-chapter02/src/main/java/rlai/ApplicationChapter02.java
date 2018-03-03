@@ -13,7 +13,12 @@ import rlai.strategy.GradientStrategy;
 import rlai.strategy.UCBStrategy;
 import rlai.updater.ExponentialRecencyWeightedAverageUpdater;
 
-public class GamblerEGSATest extends Application {
+/**
+ * @author KinoamyFx
+ * @date 2018/03/03
+ */
+public class ApplicationChapter02 extends Application {
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -47,7 +52,7 @@ public class GamblerEGSATest extends Application {
         primaryStage.show();
     }
 
-    public void epsilonGreedy(RLAIChart2D chart, int iterateTimes, List<Bandit> bandits) {
+    private void epsilonGreedy(RLAIChart2D chart, int iterateTimes, List<Bandit> bandits) {
         DoubleStream.of(0.01, 0.03, 0.06, 0.07, 0.08, 0.1).forEach(d -> {
             BanditStrategy strategy = new EpsilonGreedyStrategy(d, bandits.size(),
                 new ExponentialRecencyWeightedAverageUpdater(0.6));
@@ -59,7 +64,7 @@ public class GamblerEGSATest extends Application {
         });
     }
 
-    public void ucb(RLAIChart2D chart, int iterateTimes, List<Bandit> bandits) {
+    private void ucb(RLAIChart2D chart, int iterateTimes, List<Bandit> bandits) {
         BanditStrategy strategy = new UCBStrategy(bandits.size(), new ExponentialRecencyWeightedAverageUpdater(0.6));
         Gambler gambler = new Gambler(bandits, strategy);
         double[][] data = new double[2][iterateTimes];
@@ -68,7 +73,7 @@ public class GamblerEGSATest extends Application {
         chart.addLine("UCB", data);
     }
 
-    public void gradient(RLAIChart2D chart, int iterateTimes, List<Bandit> bandits) {
+    private void gradient(RLAIChart2D chart, int iterateTimes, List<Bandit> bandits) {
         BanditStrategy strategy = new GradientStrategy(bandits.size(), 0.2);
         Gambler gambler = new Gambler(bandits, strategy);
         double[][] data = new double[2][iterateTimes];
