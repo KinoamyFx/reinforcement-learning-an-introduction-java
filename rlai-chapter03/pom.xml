@@ -9,14 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>rlai-chapter02</artifactId>
+    <artifactId>rlai-chapter03</artifactId>
 
     <dependencies>
-
         <dependency>
             <groupId>cn.kinoamyfx</groupId>
             <artifactId>rlai-core</artifactId>
         </dependency>
-
     </dependencies>
 </project>

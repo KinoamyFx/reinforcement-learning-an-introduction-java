@@ -1,9 +1,9 @@
-package rlai;
+package com.github.kinoamyfx.rlai.chapter2;
 
 import java.util.List;
 
+import com.github.kinoamyfx.rlai.chapter2.strategy.BanditStrategy;
 import lombok.NonNull;
-import rlai.strategy.BanditStrategy;
 
 /**
  * 赌徒一个

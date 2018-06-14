@@ -1,9 +1,9 @@
-package rlai.strategy;
+package com.github.kinoamyfx.rlai.chapter2.strategy;
 
 import java.util.Random;
 import java.util.stream.IntStream;
 
-import rlai.updater.RewardUpdater;
+import com.github.kinoamyfx.rlai.chapter2.updater.RewardUpdater;
 
 public class EpsilonGreedyStrategy implements BanditStrategy {
     private double ε;

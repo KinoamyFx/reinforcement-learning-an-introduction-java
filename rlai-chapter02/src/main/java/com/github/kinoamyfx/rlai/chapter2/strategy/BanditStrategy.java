@@ -1,4 +1,4 @@
-package rlai.strategy;
+package com.github.kinoamyfx.rlai.chapter2.strategy;
 
 public interface BanditStrategy {
 

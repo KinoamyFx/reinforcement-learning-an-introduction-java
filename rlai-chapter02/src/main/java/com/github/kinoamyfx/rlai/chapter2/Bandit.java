@@ -1,4 +1,4 @@
-package rlai;
+package com.github.kinoamyfx.rlai.chapter2;
 
 /**
  * 摇臂机器人

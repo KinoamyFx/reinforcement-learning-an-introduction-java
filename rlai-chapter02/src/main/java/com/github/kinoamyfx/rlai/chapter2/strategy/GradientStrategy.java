@@ -1,4 +1,4 @@
-package rlai.strategy;
+package com.github.kinoamyfx.rlai.chapter2.strategy;
 
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;

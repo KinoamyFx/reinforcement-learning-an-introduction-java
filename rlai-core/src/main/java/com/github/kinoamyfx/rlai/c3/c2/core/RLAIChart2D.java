@@ -1,4 +1,4 @@
-package rlai;
+package com.github.kinoamyfx.rlai.c3.c2.core;
 
 import java.awt.*;
 

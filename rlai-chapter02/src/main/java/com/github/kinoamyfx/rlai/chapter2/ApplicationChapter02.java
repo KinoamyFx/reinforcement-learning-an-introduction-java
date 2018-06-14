@@ -1,17 +1,18 @@
-package rlai;
+package com.github.kinoamyfx.rlai.chapter2;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
+import com.github.kinoamyfx.rlai.c3.c2.core.RLAIChart2D;
+import com.github.kinoamyfx.rlai.chapter2.strategy.BanditStrategy;
+import com.github.kinoamyfx.rlai.chapter2.strategy.EpsilonGreedyStrategy;
+import com.github.kinoamyfx.rlai.chapter2.strategy.GradientStrategy;
+import com.github.kinoamyfx.rlai.chapter2.strategy.UCBStrategy;
+import com.github.kinoamyfx.rlai.chapter2.updater.ExponentialRecencyWeightedAverageUpdater;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import rlai.strategy.BanditStrategy;
-import rlai.strategy.EpsilonGreedyStrategy;
-import rlai.strategy.GradientStrategy;
-import rlai.strategy.UCBStrategy;
-import rlai.updater.ExponentialRecencyWeightedAverageUpdater;
 
 /**
  * @author KinoamyFx

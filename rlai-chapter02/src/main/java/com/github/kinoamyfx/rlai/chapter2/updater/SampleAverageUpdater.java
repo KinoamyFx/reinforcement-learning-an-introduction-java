@@ -1,4 +1,4 @@
-package rlai.updater;
+package com.github.kinoamyfx.rlai.chapter2.updater;
 
 public class SampleAverageUpdater implements RewardUpdater {
     @Override

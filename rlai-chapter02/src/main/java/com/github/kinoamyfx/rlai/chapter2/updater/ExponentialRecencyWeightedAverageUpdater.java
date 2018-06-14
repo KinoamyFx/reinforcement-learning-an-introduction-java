@@ -1,4 +1,4 @@
-package rlai.updater;
+package com.github.kinoamyfx.rlai.chapter2.updater;
 
 public class ExponentialRecencyWeightedAverageUpdater implements RewardUpdater {
     private double α;
